@@ -66,10 +66,6 @@ class _SignupPageState extends State<SignupPage> {
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    // Perform signup logic
-                    // Add your user registration logic here
-
-                    // Navigate to Home or Dashboard after successful signup
                     Navigator.pushReplacementNamed(context, '/home');
                   }
                 },
@@ -78,7 +74,6 @@ class _SignupPageState extends State<SignupPage> {
               SizedBox(height: 16.0),
               TextButton(
                 onPressed: () {
-                  // Navigate back to Login Page
                   Navigator.pushReplacementNamed(context, '/login');
                 },
                 child: Text('Already have an account? Log in here'),
