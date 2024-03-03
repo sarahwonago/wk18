@@ -1,31 +1,24 @@
 import 'package:flutter/material.dart';
-import 'my_ui.dart';
+import 'login_page.dart';
+import 'signup_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('My Flutter App'),
+    return MaterialApp(
+      title: 'Authentication App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
-      body: const MyUI(),
+      initialRoute: '/login',
+      routes: {
+        '/login': (context) => LoginPage(),
+        '/signup': (context) => SignupPage(),
+      },
     );
   }
 }
