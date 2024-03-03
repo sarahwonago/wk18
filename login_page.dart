@@ -4,7 +4,6 @@ class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
   _LoginPageState createState() => _LoginPageState();
 }
 
@@ -54,10 +53,6 @@ class _LoginPageState extends State<LoginPage> {
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    // Perform login logic
-                    // Add your authentication logic here
-
-                    // Navigate to Home or Dashboard after successful login
                     Navigator.pushReplacementNamed(context, '/home');
                   }
                 },
@@ -66,7 +61,6 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(height: 16.0),
               TextButton(
                 onPressed: () {
-                  // Navigate to Signup Page
                   Navigator.pushReplacementNamed(context, '/signup');
                 },
                 child: Text('Don\'t have an account? Sign up here'),
